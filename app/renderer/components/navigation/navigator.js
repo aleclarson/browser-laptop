@@ -166,7 +166,11 @@ class Navigator extends React.Component {
       onDrop={this.onDrop}
     >
       {this.topLevelStartButtons}
-      <NavigationBar />
+      {
+        this.props.showNavigationBar
+        ? <NavigationBar />
+        : null
+      }
       {this.topLevelEndButtons}
     </div>
   }
